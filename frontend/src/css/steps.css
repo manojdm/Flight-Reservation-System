@@ -1,0 +1,29 @@
+#navigate {
+	max-width: 600px;
+	display: grid;
+	padding: 20px 0px;
+	grid-template-columns: repeat(4, 1fr);
+	margin: auto;
+	text-align: center;
+}
+
+#navigate .nav {
+	margin: auto;
+	background-color: transparent;
+	border: none;
+	color: black;
+	border-bottom: 1px solid grey;
+	cursor: pointer;
+}
+
+#navigate .nav:focus {
+	outline: none;
+}
+
+.nav:disabled {
+	opacity: 0.5;
+}
+
+#navigate a {
+	text-decoration: none;
+}

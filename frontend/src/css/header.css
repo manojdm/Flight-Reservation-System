@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+#header {
+	background-color: #2c3e50;
+	color: white;
+	padding: 8px 0px;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+}
+
+#header .left {
+	color: white;
+	text-decoration: none;
+	list-style: none;
+}
+
+#header .container {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+#header .left {
+	font-size: 1.2rem;
+}
+
+#header .right ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+}
+
+#header .right li {
+	padding: 0px 15px;
+}
+
+#header Link,
+#header li {
+	text-decoration: none;
+	color: white;
+}

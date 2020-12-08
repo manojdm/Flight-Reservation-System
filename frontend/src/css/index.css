@@ -1,0 +1,109 @@
+#index h1 {
+	text-align: center;
+	font-weight: 500;
+	margin: 50px 0px;
+}
+
+#flightsList .container {
+	max-width: 750px;
+	margin: auto;
+}
+
+#flightsList .flightsList-container {
+	margin-top: 30px;
+	padding: 10px 25px;
+	display: grid;
+	grid-template-columns: 5% 25% 40% 20% 10%;
+	align-items: center;
+	border: 1px solid gainsboro;
+	background-color: white;
+	box-shadow: 0px 0px 5px gainsboro;
+}
+
+#flightsList p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+#flightsList .logo i {
+	animation: rotateFlight 4s linear forwards infinite;
+}
+
+@keyframes rotateFlight {
+	25% {
+		transform: rotate(90deg);
+		color: white;
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#flightsList .details {
+	margin-left: 0px;
+	text-align: center;
+}
+
+#flightsList .details .flightTitle {
+	font-size: 1rem;
+}
+
+#flightsList .details .flightNo {
+	font-size: 0.8rem;
+	opacity: 0.7;
+}
+
+#flightsList .flightDetails {
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+#flightsList .flightDetails .title {
+	font-size: 0.8rem;
+	padding-bottom: 5px;
+	text-shadow: 0px 1px 10px gainsboro;
+}
+
+#flightsList .flightDetails .location {
+	font-size: 1.2rem;
+}
+
+#flightsList .flightDetails .time {
+	font-size: 0.7rem;
+}
+
+#flightsList .flightDetails .title i {
+	opacity: 0.8;
+}
+
+#flightsList .price .details {
+	text-align: center;
+	margin-top: 3px;
+	border: none;
+	background-color: rgb(243, 158, 1);
+	color: white;
+	border-radius: 5%;
+	padding: 3px 10px;
+	font-family: 'Poppins', sans-serif;
+	border: 1px solid orange;
+	cursor: pointer;
+}
+
+#flightsList .price .details:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+
+#flightsList .date {
+	font-size: 0.7rem;
+	opacity: 0.8;
+	text-align: center;
+}

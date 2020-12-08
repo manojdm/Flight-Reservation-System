@@ -1,0 +1,44 @@
+#all-users {
+	padding: 10px 20px;
+	margin: auto;
+	width: fit-content;
+	background-color: white;
+}
+
+/*Table */
+#all-users table {
+	margin: 20px 15px;
+	border-collapse: collapse;
+}
+
+#all-users table thead tr td {
+	padding: 5px 10px;
+	background-color: white;
+}
+
+#all-users td {
+	border: 1px solid gainsboro;
+}
+
+#all-users table tbody tr td {
+	padding: 5px 15px;
+	background-color: rgb(243, 243, 243);
+}
+
+#all-users tbody tr td i {
+	color: tomato;
+}
+
+#all-users tbody tr td button {
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 5px 8px;
+}
+
+#all-users .icons i {
+	background-color: white;
+	padding: 5px;
+	color: black;
+	cursor: pointer;
+}

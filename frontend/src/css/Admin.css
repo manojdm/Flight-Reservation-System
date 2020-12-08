@@ -1,0 +1,29 @@
+#admin {
+	background-color: white;
+	width: fit-content;
+	margin: auto;
+	padding: 10px 20px;
+	min-height: 60vh;
+	min-width: 600px;
+}
+
+#admin .admin-panel-container ul {
+	list-style: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0;
+}
+
+#admin .admin-panel-container li {
+	line-height: 2.5rem;
+	text-align: center;
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+}
+
+#admin .admin-panel-container Link,
+#admin .admin-panel-container a {
+	text-decoration: none;
+}

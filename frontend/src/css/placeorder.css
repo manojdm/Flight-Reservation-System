@@ -1,0 +1,73 @@
+#order-page {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-gap: 30px;
+	padding: 0px 40px;
+	background-color: white;
+	padding: 15px 20px;
+	min-height: 70vh;
+}
+
+#order-page .title {
+	margin: 20px 0px;
+	line-height: 0px;
+	font-size: 1.1rem;
+	letter-spacing: 0.5px;
+	font-weight: 450;
+}
+
+#order-page .value {
+	line-height: 0px;
+	padding: 10px 0px 5px;
+	font-size: 0.9rem;
+}
+
+#order-page table tr td {
+	padding: 10px 15px;
+	border: 1px solid gainsboro;
+}
+
+#order-page table {
+	border-collapse: collapse;
+	margin-bottom: 15px;
+}
+
+#order-page hr {
+	background-color: rgb(180, 180, 180, 0.1);
+}
+
+#order-page .flight-details-container .name {
+	padding: 0;
+	margin: 2px;
+	font-size: 0.9rem;
+}
+
+#order-page .flight-details-container {
+	margin-bottom: 40px;
+	margin-top: 15px;
+}
+
+#order-page #right {
+	width: 200px;
+	height: fit-content;
+	padding: 20px 25px 30px;
+	border: 2px solid gainsboro;
+}
+
+#order-page .row {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid gainsboro;
+}
+
+#right button {
+	border: none;
+	width: 100%;
+	margin-top: 15px;
+	background-color: black;
+	color: white;
+	padding: 10px 0px;
+}

@@ -1,0 +1,39 @@
+/* Form */
+#payment-method {
+	width: 800px;
+	margin: auto;
+	background-color: white;
+	min-height: 70vh;
+	padding: 20px 50px;
+	border-radius: 10px;
+}
+
+#payment-method .container {
+	width: fit-content;
+	margin: auto;
+}
+
+#payment-method .title {
+	font-size: 1.3rem;
+}
+
+#payment-method label {
+	margin-top: 15px;
+}
+
+#payment-method input {
+	padding: 18px 175px 8px 10px;
+	background-color: gainsboro;
+	border: none;
+}
+
+#payment-method .submit {
+	display: block;
+	margin-top: 30px;
+	border: none;
+	background: black;
+	color: white;
+	padding: 5px 15px;
+	font-size: 1rem;
+	border-radius: 2px;
+}

@@ -1,0 +1,33 @@
+/* Form */
+#billing {
+	width: fit-content;
+	margin: 20px auto auto;
+	background-color: white;
+	padding: 10px 25px 15px;
+	border-radius: 10px;
+}
+
+#billing.title {
+	font-size: 1.3rem;
+}
+
+#billing label {
+	display: block;
+	margin-top: 15px;
+}
+
+#billing input {
+	padding: 8px 175px 8px 10px;
+	background-color: gainsboro;
+	border: none;
+}
+
+#billing .submit {
+	margin-top: 10px;
+	border: none;
+	background: black;
+	color: white;
+	padding: 5px 15px;
+	font-size: 1rem;
+	border-radius: 2px;
+}

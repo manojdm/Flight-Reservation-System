@@ -1,0 +1,81 @@
+/* Section */
+
+body {
+	overflow-x: hidden;
+}
+
+#profile {
+	background-color: white;
+}
+
+#profile .inside {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-gap: 20px;
+	min-height: 80vh;
+}
+
+#profile .inside .user-profile {
+	margin: 0px auto;
+}
+
+.inside .user-profile .title {
+	font-size: 1.2rem;
+}
+
+#profile .inside .user-profile input {
+	display: block;
+	margin-bottom: 10px;
+	padding: 9px 15px 7px 8px;
+	border: none;
+	background-color: rgb(243, 243, 243);
+}
+
+#profile .inside .user-profile label {
+	font-size: 0.9rem;
+}
+
+#profile .inside .user-profile button {
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 5px 15px;
+	border-radius: 2px;
+}
+
+#profile .my-orders .title {
+	font-size: 1.2rem;
+	padding-top: 15px;
+}
+
+/*My orders */
+
+#profile table {
+	margin: 20px 15px;
+	border-collapse: collapse;
+}
+
+#profile table thead tr td {
+	padding: 5px 10px;
+	background-color: white;
+}
+
+#profile td {
+	border: 1px solid gainsboro;
+}
+
+#profile table tbody tr td {
+	padding: 5px 15px;
+	background-color: rgb(243, 243, 243);
+}
+
+.my-orders tbody tr td i {
+	color: tomato;
+}
+
+.my-orders tbody tr td button {
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 5px 8px;
+}

@@ -1,0 +1,64 @@
+#all-flights {
+	padding: 10px 20px;
+	margin: auto;
+	width: fit-content;
+	background-color: white;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#all-flights .title {
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+#all-flights .createAccount {
+	text-align: right;
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+	font-size: 1.2rem;
+	position: absolute;
+	right: 130px;
+	top: 100px;
+}
+
+/*Table */
+#all-flights table {
+	margin: 20px 15px;
+	border-collapse: collapse;
+}
+
+#all-flights table thead tr td {
+	padding: 5px 10px;
+	background-color: white;
+}
+
+#all-flights td {
+	border: 1px solid gainsboro;
+}
+
+#all-flights table tbody tr td {
+	padding: 5px 15px;
+	background-color: rgb(243, 243, 243);
+}
+
+#all-flights tbody tr td i {
+	color: tomato;
+}
+
+#all-flights tbody tr td button {
+	color: white;
+	background-color: black;
+	border: none;
+	padding: 5px 8px;
+	cursor: pointer;
+}
+
+#all-flights .icons i {
+	background-color: white;
+	padding: 5px;
+	color: black;
+	cursor: pointer;
+}

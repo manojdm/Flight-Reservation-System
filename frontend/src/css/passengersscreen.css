@@ -1,0 +1,92 @@
+#passengers {
+	max-width: 950px;
+	min-height: 80vh;
+	margin: 30px 0px;
+	margin: auto;
+	background-color: white;
+	display: grid;
+	grid-template-columns: 70% 30%;
+}
+
+#passengers .form-container {
+	padding: 30px;
+}
+
+#passengers .details-container {
+	padding: 0px 10px;
+	border: 1px solid black;
+	width: fit-content;
+	margin: 0px;
+}
+#passengers .details-container .title {
+	text-transform: capitalize;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#passengers .details-container .grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#passengers .details-container .div {
+	margin: 0px 15px;
+}
+
+#passengers .details-container label {
+	display: block;
+	font-size: 0.9rem;
+}
+
+#passengers .details-container input {
+	display: block;
+	padding: 4px 0px 4px 5px;
+	margin-top: 3px;
+	background-color: gainsboro;
+	border: none;
+	font-size: 0.8rem;
+}
+
+#passengers .details-container input:focus {
+	outline: none;
+}
+
+#passengers .details-container .save-btn {
+	background-color: black;
+	color: white;
+	border: none;
+	margin: 10px 15px;
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+
+/* Right */
+#passengers .order-details {
+	width: fit-content;
+	height: fit-content;
+	margin-top: 50px;
+}
+
+#passengers .container {
+	padding: 10px 50px 20px;
+}
+
+#passengers .content {
+	font-size: 0.8rem;
+	background-color: gainsboro;
+	padding: 15px;
+	border-radius: 8px;
+}
+
+#passengers .enter {
+	margin-top: 30px;
+}
+
+#passengers .proceed-next {
+	border: none;
+	padding: 12px 45px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
