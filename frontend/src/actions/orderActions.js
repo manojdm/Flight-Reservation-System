@@ -23,16 +23,21 @@ export const savePaymentMethod = (data) => async(dispatch) => {
     }
 }
 
-export const createOrder = (order) => async(dispatch) => {
+export const createOrder = (order) => async(dispatch , getState) => {
 
     dispatch({type : ORDER_CREATE_DISPATCH , loading : true})
 
+    const userLogin = getState().userLogin;
+
+    const {userData} = userLogin
+
     try {
 
-        const header = {headers : {'Content-Type' : 'application/json'}}
+        const header = {headers : {'Content-Type' : 'application/json' , 'Authorization' : `Bearer ${userData.token}`}}
         const {data} = await axios.post('http://localhost:5000/api/orders/create' , order , header);
 
-        dispatch({type : ORDER_CREATE_SUCCESS , loading : false , success : true , payload : data})
+        dispatch({type : ORDER_CREATE_SUCCESS , loading : false , success : true , payload : data});
+        localStorage.removeItem("passengers");
         
     } catch (error) {
         dispatch({type : ORDER_CREATE_FAIL , loading : false , success : false})

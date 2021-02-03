@@ -90,3 +90,11 @@
 	cursor: pointer;
 	display: none;
 }
+
+/* Warnings */
+.warning {
+	font-size: 0.8rem;
+	color: red;
+	text-align: center;
+	display: none;
+}

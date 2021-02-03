@@ -33,7 +33,7 @@ export const loginUser = (user) => async(dispatch) => {
 
         dispatch({type : USER_LOGIN_SUCCESS , loading : false , payload : data});
 
-        localStorage.setItem('userData' , JSON.stringify(data))
+        data ? localStorage.setItem('userData' , JSON.stringify(data)) : console.log('Nothing');
         
     } catch (error) {
         dispatch({type : USER_LOGIN_FAIL , loading : false , payload : error , success : false})

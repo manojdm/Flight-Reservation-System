@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {savePassengersDetails} from '../actions/flightActions'
 import {loadFlight} from '../actions/flightActions'
 
-const Passenger = ({seats , id , callFunction}) => {
+const Passenger = ({seats , id , callFunction , showWarning}) => {
     const [count, setCount] = useState(1);
 
     const [name , setName] = useState('');
@@ -16,7 +16,16 @@ const Passenger = ({seats , id , callFunction}) => {
     const { userData} = userLogin;
 
     const getFlight = useSelector(state => state.getFlight);
-    const {loading : loadingFlight , flight} = getFlight 
+    const {loading : loadingFlight , flight} = getFlight;
+
+    const flightDetails = useSelector(state => state.getFlight)
+    const {loading , flight : Flight} = flightDetails;
+
+    let seatsFilled;
+
+    if(!loading){
+        seatsFilled = Flight.seats ? Flight.seats : [];
+    }
 
     useEffect(
         () => {
@@ -27,14 +36,15 @@ const Passenger = ({seats , id , callFunction}) => {
 
     const handleSubmit = () => {
 
-        
+    if(!loading && seatsFilled.indexOf(seat) == -1){
         if(count >= seats) {
+            seatsFilled.push(seat)
             dispatch(savePassengersDetails({name , age , seat , flight : flight._id , user : userData._id}))
             callFunction()
         } else {
             if(!loadingFlight){
+                seatsFilled.push(seat)
                 dispatch(savePassengersDetails({name , age , seat , flight : flight._id , user : userData._id}))
-
                 setTimeout(() => {
                     setName('')
                     setAge(0)
@@ -42,8 +52,11 @@ const Passenger = ({seats , id , callFunction}) => {
                     setCount(count + 1)
                 } , 1000)
 
+                }
             }
-        }
+    } else {
+        showWarning();
+    }
     }
 
     return (

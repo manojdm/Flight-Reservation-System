@@ -41,8 +41,6 @@ export const savePassengersDetails = (data) => async (dispatch) => {
         console.log(JSON.parse(localStorage.getItem('passengers')))
         localStorage.setItem('passengers' ,JSON.stringify(items))
 
-        console.log(items)
-
         dispatch ({type : SAVE_SEATS_SUCCESS , payload : items , loading : false})
     } catch(error) {
         dispatch({

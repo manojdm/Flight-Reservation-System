@@ -51,6 +51,7 @@ const PlaceOrder = ({history}) => {
 
     const handleOrder = () => {
         if(!loadingFlight )
+        console.log(billingAddress)
         dispatch(createOrder({user : userData._id , flight : flightId , passengers , billingAddress : address , paymentMethod : method.paymentMethod ,  taxPrice , totalPrice , totalPassengers : passengers.length }))
     }
 

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/passengersscreen.css'
 import Passenger from '../Components/Passenger'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadFlight } from '../actions/flightActions'
 
 const PassengersScreen = ({history , match , location }) => {
 
@@ -9,16 +10,32 @@ const PassengersScreen = ({history , match , location }) => {
     const seats = location.search? (location.search.split("-")[1]) : null
 
 
+    const dispatch = useDispatch();
+
+    useEffect(
+        () => {
+            dispatch(loadFlight(match.params.id))
+
+        }
+    , [dispatch ])
+
     const callFunction = () => {
         document.querySelector('.proceed-next').style.display = 'block'
         document.querySelector('.display').style.display = 'none'
+    }
+
+    const showWarning = () => {
+        document.querySelector('.warning').style.display = 'block';
+        
+        setTimeout(() => {
+            document.querySelector('.warning').style.display = 'none';
+        } , 5000)
     }
 
     const handleCart = (e) => {
         e.preventDefault();
         history.push('/billing')
     }
-
 
     return (
         <section id="passengers">
@@ -34,8 +51,9 @@ const PassengersScreen = ({history , match , location }) => {
                     </ul>
                 </div>
                 <p className="enter"> Please do enter all the Passenger's details below </p>
+                <p className="warning">The Seat which you are trying to book isn't available</p>
                 <Passenger callFunction = {callFunction}
-                 seats={seats} id={id}/>
+                 seats={seats} showWarning = {showWarning} id={id}/>
             </div>
             <div className="order-details">
                 <p className="enter display">Fill all the passengers details to proceed to next page</p>

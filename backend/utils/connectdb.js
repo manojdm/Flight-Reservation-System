@@ -8,7 +8,7 @@ const connectDB = asyncHandler(async (req , res) => {
         console.log('SUCCESSFULLY TO CONNECTED DB'.blue.bold.underline)
     }
     catch (error){
-        res.send('Mongo Not connecting')
+        res.write('Mongo Not connecting')
         throw new Error(error);
     }
 })
